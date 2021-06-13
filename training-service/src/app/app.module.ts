@@ -7,6 +7,7 @@ import { NavbarComponent } from './pages/navbar/navbar.component';
 import { ContentComponent } from './pages/content/content.component';
 import { CategoryService } from './content/category/service/category.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './pages/footer/footer.component';
 import { CategoryModule } from './content/category/category.module';
 
 @NgModule({
@@ -14,6 +15,7 @@ import { CategoryModule } from './content/category/category.module';
     AppComponent,
     NavbarComponent,
     ContentComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
