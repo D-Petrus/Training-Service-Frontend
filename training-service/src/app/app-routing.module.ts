@@ -5,8 +5,7 @@ import { ContentComponent } from './pages/content/content.component';
 
 const routes: Routes = [
   { path: 'categories', component: CategoryListComponent },
-  { path: '', component: ContentComponent },
-  { path: '**', component: ContentComponent }
+  { path: '', component: ContentComponent }
 ];
 
 @NgModule({

@@ -14,9 +14,9 @@ import { CategoryListComponent } from '../category/component/category-list/categ
         BrowserModule,
         HttpClientModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
     ],
     providers: [],
     bootstrap: [AppComponent]
 })
-export class BookModule {}
+export class CategoryModule {}
