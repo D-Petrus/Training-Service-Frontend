@@ -5,18 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { ContentComponent } from './pages/content/content.component';
+import { CategoryListComponent } from './content/category/component/category-list/category-list.component';
+import { CategoryService } from './content/category/service/category.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    ContentComponent
+    ContentComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
-  providers: [],
+  providers: [CategoryService, HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
