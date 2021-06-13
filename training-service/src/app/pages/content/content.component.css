@@ -1,0 +1,17 @@
+.col-sm img {
+  width: 80%;
+  padding-top: 1rem;
+}
+
+h3 {
+  padding: 2.5rem 0rem 2.5rem 0rem;
+}
+
+h1 {
+  padding-top: 1.5rem;
+}
+
+button {
+  margin-top: 1rem;
+  font-size: 24px;
+}
