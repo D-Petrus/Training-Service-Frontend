@@ -5,10 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { ContentComponent } from './pages/content/content.component';
-import { CategoryListComponent } from './content/category/component/category-list/category-list.component';
 import { CategoryService } from './content/category/service/category.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './pages/footer/footer.component';
+import { CategoryModule } from './content/category/category.module';
 
 @NgModule({
   declarations: [
@@ -20,9 +20,11 @@ import { FooterComponent } from './pages/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    CategoryModule
 
   ],
-  providers: [CategoryService, HttpClientModule],
+  providers: [CategoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
