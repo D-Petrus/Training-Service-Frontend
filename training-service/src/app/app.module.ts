@@ -14,6 +14,7 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SubcategoryAddComponent } from './content/subcategory/component/subcategory-add/subcategory-add.component';
 import { SubcategoryModule } from './content/subcategory/subcategory.module';
+import { SubcategoryListComponent } from './content/subcategory/component/subcategory-list/subcategory-list.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SubcategoryModule } from './content/subcategory/subcategory.module';
     FooterComponent,
     ContactComponent,
     SubcategoryAddComponent,
+    SubcategoryListComponent
   ],
   imports: [
     BrowserModule,
