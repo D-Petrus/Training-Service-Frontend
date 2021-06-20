@@ -16,9 +16,14 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { SubcategoryAddComponent } from './content/subcategory/component/subcategory-add/subcategory-add.component';
 import { SubcategoryModule } from './content/subcategory/subcategory.module';
 import { SubcategoryListComponent } from './content/subcategory/component/subcategory-list/subcategory-list.component';
+
+import { CourseListComponent } from './content/course/component/course-list/course-list.component';
+import { CourseModule } from './content/course/course.module';
+
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MailFormComponent } from './pages/mail-form/mail-form.component';
 import { SummaryComponent } from './content/summary/summary.component';
+
 
 @NgModule({
   declarations: [
@@ -30,8 +35,12 @@ import { SummaryComponent } from './content/summary/summary.component';
     ContactComponent,
     SubcategoryAddComponent,
     SubcategoryListComponent,
+
+    CourseListComponent
+
     MailFormComponent,
     SummaryComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -41,7 +50,11 @@ import { SummaryComponent } from './content/summary/summary.component';
     FormsModule,
     ReactiveFormsModule,
     SubcategoryModule,
+
+    CourseModule
+
     FontAwesomeModule
+
   ],
   providers: [CategoryService],
   bootstrap: [AppComponent]
