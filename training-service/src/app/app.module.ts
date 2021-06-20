@@ -17,19 +17,19 @@ import { SubcategoryAddComponent } from './content/subcategory/component/subcate
 import { SubcategoryModule } from './content/subcategory/subcategory.module';
 import { SubcategoryListComponent } from './content/subcategory/component/subcategory-list/subcategory-list.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MailFormComponent } from './pages/mail-form/mail-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ContentComponent,
-
     AboutComponent,
-
     FooterComponent,
     ContactComponent,
     SubcategoryAddComponent,
-    SubcategoryListComponent
+    SubcategoryListComponent,
+    MailFormComponent,
   ],
   imports: [
     BrowserModule,

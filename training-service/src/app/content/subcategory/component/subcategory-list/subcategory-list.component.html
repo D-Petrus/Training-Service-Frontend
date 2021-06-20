@@ -1,5 +1,10 @@
 <div class="container">
   <div class="row">
-    <div class="col" *ngFor="let s of subcat">{{ s.name }}</div>
+    <div class="col-4" *ngFor="let item of subcat">
+    <button type="button" class="btn btn-primary mr-2 square">{{ item.name }}</button>
+    </div>
+  </div>
+  <div class="row">
+    <a routerLink="../categories">Back to categories</a>
   </div>
 </div>
