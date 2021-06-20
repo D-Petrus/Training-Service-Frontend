@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Category } from '../../model/category';
 import { CategoryService } from '../../service/category.service';
 
@@ -11,10 +12,14 @@ export class CategoryListComponent implements OnInit {
 
   category: Category[] = [];
 
-  constructor(private categoryService: CategoryService) {}
+  constructor(private categoryService: CategoryService, private router: Router) {}
 
   ngOnInit(){
     this.categoryService.getCategoryList().subscribe((data) => this.category = data);
+  }
+
+  goToSubcategories() {
+    this.router.navigate(['/subcategories']);
   }
 
 }
