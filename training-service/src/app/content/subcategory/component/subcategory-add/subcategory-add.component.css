@@ -1,0 +1,11 @@
+.padding10 {
+  padding: 10px 0px;
+}
+
+.textarea-padding {
+  padding: 10px 0px;
+}
+
+.not-valid {
+  color: red;
+}
