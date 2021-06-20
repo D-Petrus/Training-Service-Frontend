@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {faThumbsUp,faUser,faEnvelope,faMapMarker} from '@fortawesome/free-solid-svg-icons';
 
 
@@ -12,9 +12,4 @@ export class FooterComponent  {
   faThumbsUp = faThumbsUp;
   faEnvelope = faEnvelope;
   faMapMarker = faMapMarker;
-
-
-
-
-
 }
