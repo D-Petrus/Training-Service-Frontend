@@ -8,12 +8,14 @@ import { ContentComponent } from './pages/content/content.component';
 import { CategoryService } from './content/category/service/category.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoryModule } from './content/category/category.module';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ContentComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
