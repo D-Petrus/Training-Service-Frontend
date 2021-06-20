@@ -9,8 +9,9 @@ import { CategoryService } from './content/category/service/category.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './pages/footer/footer.component';
 import { CategoryModule } from './content/category/category.module';
-import { SubcategoryAddComponent } from './content/subcategory/component/subcategory-add/subcategory-add.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { SubcategoryModule } from './content/subcategory/subcategory.module';
 
 @NgModule({
   declarations: [
@@ -18,15 +19,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NavbarComponent,
     ContentComponent,
     FooterComponent,
-    SubcategoryAddComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     CategoryModule,
+    SubcategoryModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [CategoryService],
   bootstrap: [AppComponent]
