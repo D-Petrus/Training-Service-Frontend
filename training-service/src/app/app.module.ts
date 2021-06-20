@@ -13,6 +13,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 
 import { SubcategoryAddComponent } from './content/subcategory/component/subcategory-add/subcategory-add.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { SubcategoryModule } from './content/subcategory/subcategory.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     AddContactPage
     ContactComponent,
-
     SubcategoryAddComponent,
   ],
   imports: [
@@ -30,10 +31,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     CategoryModule,
+    SubcategoryModule,
     AddContactPage
-
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [CategoryService],
   bootstrap: [AppComponent]
