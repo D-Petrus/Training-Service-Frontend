@@ -6,7 +6,9 @@
       class="form-control"
       placeholder="Enter e-mail"
       formControlName="emailAddress"
-      [ngClass]="!mailForm.valid ? 'not-valid-input' : 'valid-input'"
+      [ngClass]="
+        !mailForm.valid && mailForm.touched ? 'not-valid-input' : 'valid-input'
+      "
     />
     <p
       *ngIf="
