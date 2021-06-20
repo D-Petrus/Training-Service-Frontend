@@ -11,7 +11,7 @@ import { SubcategoryListComponent } from './content/subcategory/component/subcat
 
 import { ContentComponent } from './pages/content/content.component';
 
-import { Cours
+import { CourseListComponent } from './content/course/component/course-list/course-list.component';
 import { MailFormComponent } from './pages/mail-form/mail-form.component';
 import { SummaryComponent } from './content/summary/summary.component';
 

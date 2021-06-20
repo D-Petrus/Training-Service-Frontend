@@ -36,7 +36,7 @@ import { SummaryComponent } from './content/summary/summary.component';
     SubcategoryAddComponent,
     SubcategoryListComponent,
 
-    CourseListComponent
+    CourseListComponent,
 
     MailFormComponent,
     SummaryComponent,
@@ -51,10 +51,8 @@ import { SummaryComponent } from './content/summary/summary.component';
     ReactiveFormsModule,
     SubcategoryModule,
 
-    CourseModule
-
+    CourseModule,
     FontAwesomeModule
-
   ],
   providers: [CategoryService],
   bootstrap: [AppComponent]
