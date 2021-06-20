@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CategoryService } from './content/category/service/category.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoryModule } from './content/category/category.module';
+import { AboutComponent } from './pages/about/about.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -21,6 +22,9 @@ import { SubcategoryListComponent } from './content/subcategory/component/subcat
     AppComponent,
     NavbarComponent,
     ContentComponent,
+
+    AboutComponent,
+
     FooterComponent,
     ContactComponent,
     SubcategoryAddComponent,
