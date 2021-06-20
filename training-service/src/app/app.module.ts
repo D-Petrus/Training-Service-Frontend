@@ -16,19 +16,19 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { SubcategoryAddComponent } from './content/subcategory/component/subcategory-add/subcategory-add.component';
 import { SubcategoryModule } from './content/subcategory/subcategory.module';
 import { SubcategoryListComponent } from './content/subcategory/component/subcategory-list/subcategory-list.component';
+import { CourseListComponent } from './content/course/component/course-list/course-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ContentComponent,
-
     AboutComponent,
-
     FooterComponent,
     ContactComponent,
     SubcategoryAddComponent,
-    SubcategoryListComponent
+    SubcategoryListComponent,
+    CourseListComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +37,7 @@ import { SubcategoryListComponent } from './content/subcategory/component/subcat
     CategoryModule,
     FormsModule,
     ReactiveFormsModule,
-    SubcategoryModule
+    SubcategoryModule,
   ],
   providers: [CategoryService],
   bootstrap: [AppComponent]
