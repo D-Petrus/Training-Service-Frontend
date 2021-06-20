@@ -23,9 +23,7 @@ import { MailFormComponent } from './pages/mail-form/mail-form.component';
     AppComponent,
     NavbarComponent,
     ContentComponent,
-
     AboutComponent,
-
     FooterComponent,
     ContactComponent,
     SubcategoryAddComponent,
