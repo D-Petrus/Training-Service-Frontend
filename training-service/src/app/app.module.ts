@@ -17,6 +17,7 @@ import { SubcategoryAddComponent } from './content/subcategory/component/subcate
 import { SubcategoryModule } from './content/subcategory/subcategory.module';
 import { SubcategoryListComponent } from './content/subcategory/component/subcategory-list/subcategory-list.component';
 import { CourseListComponent } from './content/course/component/course-list/course-list.component';
+import { CourseModule } from './content/course/course.module';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { CourseListComponent } from './content/course/component/course-list/cour
     FormsModule,
     ReactiveFormsModule,
     SubcategoryModule,
+    CourseModule
   ],
   providers: [CategoryService],
   bootstrap: [AppComponent]
