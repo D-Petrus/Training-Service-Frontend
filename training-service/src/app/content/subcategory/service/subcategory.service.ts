@@ -8,8 +8,6 @@ export class SubcategoryService {
 
   private subcatList: Subcategory[] = [];
 
-  constructor() { }
-
   addNewSubCat(subcategory:Subcategory): void {
     this.subcatList.push(subcategory);
   }

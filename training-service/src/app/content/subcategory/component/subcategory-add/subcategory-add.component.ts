@@ -8,7 +8,7 @@ import { SubcategoryService } from '../../service/subcategory.service';
   templateUrl: './subcategory-add.component.html',
   styleUrls: ['./subcategory-add.component.css']
 })
-export class SubcategoryAddComponent implements OnInit {
+export class SubcategoryAddComponent {
 
   submitted = false;
 
@@ -23,14 +23,10 @@ export class SubcategoryAddComponent implements OnInit {
 
   constructor(private subcategoryService: SubcategoryService) { }
 
-  ngOnInit(): void {
-  }
-
   saveSubcat() {
     const subcat:Subcategory = this.subcatAddForm.value;
       this.subcategoryService.addNewSubCat(subcat);
       this.submitted = true;
-      console.log("Saved subcat", subcat);
       this.subcatAddForm.reset();
   }
 
