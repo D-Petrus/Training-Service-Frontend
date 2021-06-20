@@ -1,0 +1,26 @@
+.contactManager{
+  text-align: center;
+}
+.maps{
+  padding-top: 1rem;
+
+}
+.contactTitle{
+  padding-top: 2rem;
+}
+.contactText{
+  padding-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.address{
+  padding-top: 2rem;
+  font-size: 1.5rem;
+}
+.contact{
+  text-align: center;
+}
+.managerName{
+  font-size: 1.5rem;
+  text-decoration:underline;
+}

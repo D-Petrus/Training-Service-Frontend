@@ -1,0 +1,17 @@
+:root {
+  --red: #FF0000;
+  --blue: #0000FF;
+  --lightgreen: #00FF00;
+  --green: #008500;
+}
+.padding10 {
+  padding: 10px 0px;
+}
+
+.textarea-padding {
+  padding: 10px 0px;
+}
+
+.not-valid {
+  color: var(--red);
+}

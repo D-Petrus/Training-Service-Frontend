@@ -4,11 +4,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from 'src/app/app.component';
 import { CategoryListComponent } from '../category/component/category-list/category-list.component';
+import { CategoryAddComponent } from './component/category-add/category-add.component';
 
 
 @NgModule({
   declarations: [
-    CategoryListComponent
+    CategoryListComponent,
+    CategoryAddComponent
   ],
     imports: [
         BrowserModule,
