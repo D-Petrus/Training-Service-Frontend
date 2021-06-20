@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   imports: [
     FormsModule,
     ReactiveFormsModule,
-    CommonModule
+    BrowserModule
   ]
 })
 export class SubcategoryModule { }
