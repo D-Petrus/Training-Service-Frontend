@@ -16,6 +16,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { SubcategoryAddComponent } from './content/subcategory/component/subcategory-add/subcategory-add.component';
 import { SubcategoryModule } from './content/subcategory/subcategory.module';
 import { SubcategoryListComponent } from './content/subcategory/component/subcategory-list/subcategory-list.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { SubcategoryListComponent } from './content/subcategory/component/subcat
     CategoryModule,
     FormsModule,
     ReactiveFormsModule,
-    SubcategoryModule
+    SubcategoryModule,
+    FontAwesomeModule
   ],
   providers: [CategoryService],
   bootstrap: [AppComponent]
