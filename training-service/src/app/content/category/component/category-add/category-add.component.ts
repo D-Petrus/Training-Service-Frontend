@@ -16,7 +16,7 @@ export class CategoryAddComponent implements OnInit {
 
   categoryAddForm = new FormGroup({
     id: new FormControl(''),
-    nameCategory: new FormControl('', [
+    name: new FormControl('', [
       Validators.required,
     ]),
     description: new FormControl('', [Validators.required, Validators.maxLength(200)]),
@@ -37,6 +37,6 @@ export class CategoryAddComponent implements OnInit {
   }
 
   getBack() {
-    this.router.navigate(['/books']);
+    this.router.navigate(['/categories']);
   }
 }
