@@ -10,17 +10,16 @@ import { SubcategoryAddComponent } from './content/subcategory/component/subcate
 import { SubcategoryListComponent } from './content/subcategory/component/subcategory-list/subcategory-list.component';
 
 import { ContentComponent } from './pages/content/content.component';
+import { MailFormComponent } from './pages/mail-form/mail-form.component';
 
 const routes: Routes = [
   { path: 'categories', component: CategoryListComponent },
-
   { path: 'about', component: AboutComponent},
-
   { path: 'categories/add', component: CategoryAddComponent },
   { path: 'subcategories', component: SubcategoryListComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'subcategory/add', component: SubcategoryAddComponent },
-
+  { path: 'mail', component: MailFormComponent },
   { path: '', component: ContentComponent }
 ];
 
