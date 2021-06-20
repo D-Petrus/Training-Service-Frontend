@@ -11,6 +11,7 @@ import { SubcategoryListComponent } from './content/subcategory/component/subcat
 
 import { ContentComponent } from './pages/content/content.component';
 import { MailFormComponent } from './pages/mail-form/mail-form.component';
+import { SummaryComponent } from './content/summary/summary.component';
 
 const routes: Routes = [
   { path: 'categories', component: CategoryListComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'subcategory/add', component: SubcategoryAddComponent },
   { path: 'mail', component: MailFormComponent },
+  { path: 'summary', component: SummaryComponent },
   { path: '', component: ContentComponent }
 ];
 
