@@ -28,7 +28,7 @@ import { SubcategoryListComponent } from './content/subcategory/component/subcat
     FooterComponent,
     ContactComponent,
     SubcategoryAddComponent,
-    SubcategoryListComponent
+    SubcategoryListComponent,
   ],
   imports: [
     BrowserModule,
