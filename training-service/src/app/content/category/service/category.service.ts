@@ -39,11 +39,11 @@ export class CategoryService {
   constructor(private http: HttpClient) {}
 
   getCategoryList = (): Observable<Category[]> =>
-    this.http.get<Category[]>(`${this.apiUrl}/main`);
+    this.http.get<Category[]>(`${this.apiUrl}/categories`);
 
   addCategory = (category: Category): Observable<Category> => {
   let catBody = JSON.stringify(category);
-    return this.http.post<Category>(`${this.apiUrl}/main`, catBody, this.httpOptions)
+    return this.http.post<Category>(`${this.apiUrl}/categories`, catBody, this.httpOptions)
     .pipe(catchError(this.handleError));
   }
 }
