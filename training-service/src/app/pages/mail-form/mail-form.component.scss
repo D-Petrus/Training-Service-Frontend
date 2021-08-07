@@ -4,11 +4,9 @@ $green-alert: green;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  position: relative;
   margin-right: 1rem;
-  margin-bottom: 5rem;
+  margin-top: 10rem;
 }
 
 .form-group{
