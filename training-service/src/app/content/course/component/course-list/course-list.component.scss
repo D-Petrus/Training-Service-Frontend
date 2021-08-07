@@ -1,5 +1,4 @@
-$main-color: #1f37e4;
-$white-color: #fff;
+@import "../../../../colorPalette.scss";
 
 .container {
   margin-top: 1rem;
@@ -22,7 +21,7 @@ $white-color: #fff;
   display: inline-block;
   color: $main-color;
   border-radius: 3px;
-  text-transform: uppercase
+  text-transform: uppercase;  
 }
 
 .check input:checked+span {
