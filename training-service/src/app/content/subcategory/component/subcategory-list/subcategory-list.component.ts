@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subcategory } from '../../model/subcategory';
 import { SubcategoryService } from '../../service/subcategory.service';
 
@@ -11,10 +12,10 @@ export class SubcategoryListComponent implements OnInit {
 
   subcat: Subcategory[] = [];
 
-  constructor(private subcategoryService: SubcategoryService) { }
+  constructor(private subcategoryService: SubcategoryService, private router: Router) { }
 
   ngOnInit(): void {
-    this.subcat = this.subcategoryService.getSubcatList();
+     this.subcategoryService.getSubcategoryList().subscribe((data) => this.subcat = data);
   }
 
 }
