@@ -7,7 +7,7 @@ import { CourseService } from '../../service/course.service';
 @Component({
   selector: 'app-course-list',
   templateUrl: './course-list.component.html',
-  styleUrls: ['./course-list.component.scss']
+  styleUrls: ['./course-list.component.css']
 })
 export class CourseListComponent implements OnInit {
   private patternEmail: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";

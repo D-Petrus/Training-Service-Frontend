@@ -22,4 +22,19 @@ export const course: Course[] = [
         duration: 456,
         price: 8765
     }
+    ,
+    {
+        id: 4,
+        name: "czwarty kurs",
+        description: "opis2",
+        duration: 456,
+        price: 8765
+    },
+    {
+        id: 5,
+        name: "piąty kurs",
+        description: "opis2",
+        duration: 456,
+        price: 8765
+    }
 ]
