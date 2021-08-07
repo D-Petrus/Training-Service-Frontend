@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { Category } from '../../model/category';
 import { CategoryService } from '../../service/category.service';
 
@@ -17,9 +18,4 @@ export class CategoryListComponent implements OnInit {
   ngOnInit(){
     this.categoryService.getCategoryList().subscribe((data) => this.category = data);
   }
-
-  goToSubcategories() {
-    this.router.navigate(['/subcategories']);
-  }
-
 }

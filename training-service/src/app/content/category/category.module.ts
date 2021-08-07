@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from 'src/app/app.component';
 import { CategoryListComponent } from '../category/component/category-list/category-list.component';
 import { CategoryAddComponent } from './component/category-add/category-add.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { CategoryAddComponent } from './component/category-add/category-add.comp
         HttpClientModule,
         FormsModule,
         ReactiveFormsModule,
+        RouterModule
     ],
     providers: [],
     bootstrap: [AppComponent]

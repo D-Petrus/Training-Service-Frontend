@@ -17,16 +17,15 @@ import { SummaryComponent } from './content/summary/summary.component';
 
 
 const routes: Routes = [
-  { path: 'categories', component: CategoryListComponent },
-  { path: 'about', component: AboutComponent},
-  { path: 'categories/add', component: CategoryAddComponent },
-  { path: 'subcategories', component: SubcategoryListComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'category', component: CategoryListComponent },
+  { path: 'category/add', component: CategoryAddComponent },
+  { path: 'category/:name', component: SubcategoryListComponent },
+  { path: 'subcategory', component: SubcategoryListComponent },
+  { path: 'subcategory/:name', component: CategoryListComponent },
   { path: 'subcategory/add', component: SubcategoryAddComponent },
-
+  { path: 'about', component: AboutComponent},
+  { path: 'contact', component: ContactComponent },
   { path: 'course' , component: CourseListComponent},
-
-
   { path: 'mail', component: MailFormComponent },
   { path: 'summary', component: SummaryComponent },
 

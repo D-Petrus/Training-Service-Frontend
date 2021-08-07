@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-4" *ngFor="let item of category">
-    <button class="btn btn-primary square" (click)="goToSubcategories()">{{ item.name }}</button>
+    <button class="btn btn-primary square" [routerLink]="['/category', item.name]">{{ item.name }}</button>
     </div>
   </div>
 </div>
