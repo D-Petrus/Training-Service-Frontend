@@ -19,7 +19,7 @@ import { SummaryComponent } from './content/summary/summary.component';
 const routes: Routes = [
   { path: 'categories', component: CategoryListComponent },
   { path: 'about', component: AboutComponent},
-  { path: 'categories/add', component: CategoryAddComponent },
+  { path: 'categories/add', component: CategoryAddComponent }, 
   { path: 'subcategories', component: SubcategoryListComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'subcategory/add', component: SubcategoryAddComponent },

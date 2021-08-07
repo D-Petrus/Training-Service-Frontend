@@ -1,6 +1,19 @@
 $red-alert: #f00;
 $green-alert: green;
+.submitForm{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 1rem;
+  margin-bottom: 5rem;
+}
 
+.form-group{
+  width: 15rem;
+}
 .not-valid-input {
   border-color: $red-alert;
   color: $red-alert;
@@ -16,3 +29,5 @@ $green-alert: green;
   font-weight: 500;
   padding: 0.5rem;
 }
+
+  
