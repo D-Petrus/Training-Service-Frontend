@@ -14,6 +14,8 @@ export class SubcategoryService {
   private subcatList: Subcategory[] = subcategory;
   private readonly apiUrl: string = environment.apiUrl;
 
+  // TODO: msgTrue and handleError is for post method's (adding)
+
   msgTrue = false;
 
   private handleError(error: HttpErrorResponse) {
