@@ -10,6 +10,10 @@ import { CourseService } from '../../service/course.service';
   styleUrls: ['./course-list.component.scss']
 })
 export class CourseListComponent implements OnInit {
+
+  total!: 0;
+  course: Course[] = [];
+
   private patternEmail: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
 
   mailForm = new FormGroup({
@@ -19,12 +23,11 @@ export class CourseListComponent implements OnInit {
     ])
   });
 
-  course: Course[] = [];
-
   constructor(private courseService: CourseService) { }
 
-  ngOnInit(): void{
+  ngOnInit() {
     this.course = this.courseService.getCourseList();
   }
+
 
 }

@@ -5,6 +5,10 @@
         <input type="checkbox">
           <span>{{ item.name }}</span>
       </label>
+      <span>
+        opis: {{ item.description }}, czas trwania: {{ item.duration * 1000 | date:'mm:ss' }} minut,
+        cena {{ item.price }} zł
+      </span>
     </div>
   </div>
   <app-mail-form></app-mail-form>
