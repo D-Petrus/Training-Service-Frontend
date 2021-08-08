@@ -29,8 +29,6 @@ export class CourseListComponent implements OnInit {
     this.course = this.courseService.getCourseList();
   }
 
-  convertDurationToTime(item: number):any {
-    return item * 1000;
-  }
+  convertDurationToTime = (item: number) => item * 1000;
 
 }
