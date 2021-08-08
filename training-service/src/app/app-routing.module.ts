@@ -14,14 +14,16 @@ import { ContentComponent } from './pages/content/content.component';
 import { CourseListComponent } from './content/course/component/course-list/course-list.component';
 import { MailFormComponent } from './pages/mail-form/mail-form.component';
 import { SummaryComponent } from './content/summary/summary.component';
+import { CategoryNameComponent } from './content/category/component/category-name/category-name.component';
+import { SubcategoryNameComponent } from './content/subcategory/component/subcategory-name/subcategory-name.component';
 
 
 const routes: Routes = [
   { path: 'category', component: CategoryListComponent },
   { path: 'category/add', component: CategoryAddComponent },
-  { path: 'category/:name', component: SubcategoryListComponent },
+  { path: 'category/:name', component: CategoryNameComponent },
   { path: 'subcategory', component: SubcategoryListComponent },
-  { path: 'subcategory/:name', component: CategoryListComponent },
+  { path: 'subcategory/:name', component: SubcategoryNameComponent },
   { path: 'subcategory/add', component: SubcategoryAddComponent },
   { path: 'about', component: AboutComponent},
   { path: 'contact', component: ContactComponent },
