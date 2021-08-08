@@ -1,6 +1,29 @@
-.square {
-  width: 15rem;
-  height: 15rem;
-  margin: 1rem;
+.container{
+  display: flex;
+  justify-content: center;
+
+}
+.categoryTile {
+  text-align: center;
+  width: 50rem;
+  height:6rem;
   font-size: 2rem;
+  margin-top: 1rem;
+  color: white;
+  background-color: rgba(31,55,228);
+  border-radius: 1rem;
+
+}
+.btn-secondary{
+  margin-left: 4rem;
+  text-align: end;
+
+  font-size: 0.9rem;
+  background-color: rgba(31,55,228);
+}
+.card-body{
+  margin-top: 1rem;
+  max-height: 4rem;
+  font-size: 1rem;
+  background-color: rgba(31,55,228);
 }

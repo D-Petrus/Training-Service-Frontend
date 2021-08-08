@@ -1,3 +1,4 @@
+import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -10,6 +11,7 @@ import { CategoryService } from '../../service/category.service';
   styleUrls: ['./category-list.component.css']
 })
 export class CategoryListComponent implements OnInit {
+  isShow = false;
 
   category: Category[] = [];
 
@@ -17,5 +19,8 @@ export class CategoryListComponent implements OnInit {
 
   ngOnInit(){
     this.categoryService.getCategoryList().subscribe((data) => this.category = data);
+  }
+  toggleDescription(show: boolean) {
+    this.isShow = show;
   }
 }
