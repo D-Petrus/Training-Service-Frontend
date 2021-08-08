@@ -9,11 +9,16 @@ import { ActivatedRoute } from '@angular/router';
 export class SubcategoryNameComponent implements OnInit {
 
   name: string | undefined;
+  paramSubscription: any;
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.route.params.subscribe(p => this.name = p['name'])
+    this.paramSubscription = this.route.params.subscribe(p => this.name = p['name'])
+  }
+
+  ngOnDestroy() {
+    this.paramSubscription.unsubscribe();
   }
 
 }

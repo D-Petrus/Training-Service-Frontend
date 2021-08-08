@@ -14,7 +14,7 @@ import { ContentComponent } from './pages/content/content.component';
 import { CourseListComponent } from './content/course/component/course-list/course-list.component';
 import { MailFormComponent } from './pages/mail-form/mail-form.component';
 import { SummaryComponent } from './content/summary/summary.component';
-import { CategoryNameComponent } from './content/category/component/category-name/category-name.component';
+import { CategoryNameComponent } from './content/category/component/category-name/category.component';
 import { SubcategoryNameComponent } from './content/subcategory/component/subcategory-name/subcategory-name.component';
 
 
