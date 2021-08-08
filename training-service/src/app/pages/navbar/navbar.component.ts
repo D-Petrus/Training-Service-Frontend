@@ -6,4 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  isCollapsed = true;
+
+  clickMenu = () => this.isCollapsed = !this.isCollapsed;
 }
