@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-subcategory-name',
@@ -9,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class SubcategoryNameComponent implements OnInit {
 
   name: string | undefined;
-  paramSubscription: any;
+  paramSubscription: Subscription | undefined;
 
   constructor(private route: ActivatedRoute) { }
 
@@ -18,7 +19,7 @@ export class SubcategoryNameComponent implements OnInit {
   }
 
   ngOnDestroy() {
-    this.paramSubscription.unsubscribe();
+    this.paramSubscription?.unsubscribe();
   }
 
 }
