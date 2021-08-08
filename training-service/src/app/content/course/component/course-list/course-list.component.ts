@@ -11,7 +11,7 @@ import { CourseService } from '../../service/course.service';
 })
 export class CourseListComponent implements OnInit {
 
-  total!: 0;
+  total: number = 0;
   course: Course[] = [];
 
   private patternEmail: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
@@ -29,5 +29,8 @@ export class CourseListComponent implements OnInit {
     this.course = this.courseService.getCourseList();
   }
 
+  convertDurationToTime(item: number):any {
+    return item * 1000;
+  }
 
 }

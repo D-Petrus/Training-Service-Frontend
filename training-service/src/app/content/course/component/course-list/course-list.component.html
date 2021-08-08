@@ -6,7 +6,7 @@
           <span>{{ item.name }}</span>
       </label>
       <span>
-        opis: {{ item.description }}, czas trwania: {{ item.duration * 1000 | date:'mm:ss' }} minut,
+        opis: {{ item.description }}, czas trwania: {{ convertDurationToTime(item.duration)| date:'mm:ss' }} minut,
         cena {{ item.price }} zł
       </span>
     </div>
