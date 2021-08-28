@@ -17,8 +17,7 @@ export class SubcategoryListComponent implements OnInit {
   ngOnInit(): void {
     this.subcategoryService.getSubcategoryList(this.name).subscribe(data => {
       console.log(this.name)
-      console.log(data);
-      this.subcat = data;
+      this.subcat = data.results;
     });
   }
 

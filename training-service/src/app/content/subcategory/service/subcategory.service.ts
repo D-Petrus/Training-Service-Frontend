@@ -6,6 +6,7 @@ import { throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { of } from 'rxjs';
+import { DataResponse } from '../../category/model/data-response';
 
 @Injectable({
   providedIn: 'root'
@@ -40,6 +41,7 @@ export class SubcategoryService {
     this.subcatList.push(subcat);
   }
 
-  getSubcategoryList = (name: string): Observable<Subcategory[]> =>
-    of([]);
+  getSubcategoryList(name: string): Observable<DataResponse<Subcategory>> {
+    return of({results: subcategory, count: 4})
+  };
 }
