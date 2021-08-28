@@ -1,18 +1,10 @@
-<div class="container">
+<div class="container-sm">
   <div class="row">
 
-    <div class="-4" *ngFor="let item of category">
-    <div class="categoryTile"[routerLink]="['/category', item.name]">{{ item.name }}
-      <div class="btn btn-secondary" (mouseenter)="toggleDescription(true)" (mouseleave)="toggleDescription(false)">
-        info
-      </div>
-    <div *ngIf="isShow">
-      <div class="card card-body">
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-      </div>
-    </div>
-    </div>
+    <div class="col-sm4" *ngFor="let item of category">
 
+      <button type="button" class="btn btn-primary mr-2 square" [routerLink]="['/category', item.name]">{{ item.name }}
+      </button>
 
     </div>
     </div>
