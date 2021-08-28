@@ -1,9 +1,12 @@
+@import "../../colorPalette.scss";
+
 .navbar {
   background-color: rgba(31,55,228);
+  z-index: 999;
 }
 
 .navbar a {
-  color: #fff;
+  color: $white-color;
   font-size: 1.2rem;
   margin-right: 2rem;
 }

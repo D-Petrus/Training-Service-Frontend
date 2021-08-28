@@ -23,7 +23,11 @@ import { CourseModule } from './content/course/course.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MailFormComponent } from './pages/mail-form/mail-form.component';
 import { SummaryComponent } from './content/summary/summary.component';
+<<<<<<< HEAD
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+=======
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+>>>>>>> bbf133c0977a42132b89a4d672e325259b526dfe
 
 
 @NgModule({
@@ -54,7 +58,11 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
     CourseModule,
     FontAwesomeModule,
+<<<<<<< HEAD
     AngularFontAwesomeModule
+=======
+    NgbModule
+>>>>>>> bbf133c0977a42132b89a4d672e325259b526dfe
   ],
   providers: [CategoryService],
   bootstrap: [AppComponent]
