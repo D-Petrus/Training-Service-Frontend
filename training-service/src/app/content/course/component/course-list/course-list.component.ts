@@ -1,3 +1,4 @@
+import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Course } from '../../model/course';
@@ -11,8 +12,8 @@ import { CourseService } from '../../service/course.service';
 })
 export class CourseListComponent implements OnInit {
 
-  total: number = 0;
   course: Course[] = [];
+  @Input() name: string = '';
 
   private patternEmail: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
 
@@ -26,7 +27,9 @@ export class CourseListComponent implements OnInit {
   constructor(private courseService: CourseService) { }
 
   ngOnInit() {
-    this.course = this.courseService.getCourseList();
+    this.courseService.getCourseList(this.name).subscribe(data => {
+      this.course = data.results;
+    });
   }
 
   convertDurationToTime = (item: number) => item * 1000;
