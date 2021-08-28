@@ -5,6 +5,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -40,5 +41,5 @@ export class SubcategoryService {
   }
 
   getSubcategoryList = (name: string): Observable<Subcategory[]> =>
-    this.http.get<Subcategory[]>(`${this.apiUrl}/subcategories/${name}`);
+    of([]);
 }
