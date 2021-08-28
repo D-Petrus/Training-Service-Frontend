@@ -1,6 +1,6 @@
 <div class="container-sm">
   <div class="row">
-    <div class="col-sm4" *ngFor="let item of categories">
+    <div class="col" *ngFor="let item of categories">
       <button type="button" class="btn btn-primary mr-2 square" [routerLink]="['/category', item.name]">{{ item.name }}
       </button>
     </div>
