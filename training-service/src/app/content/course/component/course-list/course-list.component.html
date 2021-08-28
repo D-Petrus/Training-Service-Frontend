@@ -1,9 +1,15 @@
 <div class="container">
-    <div class="row">
-      <div class="col-4" *ngFor="let item of course">
-      <button class="btn btn-primary square">{{ item.name }}</button>
-      </div>
+  <div class="row">
+    <div class="form-check" *ngFor="let item of course">
+      <label class="check">
+        <input type="checkbox">
+          <span>{{ item.name }}</span>
+      </label>
+      <span>
+        opis: {{ item.description }}, czas trwania: {{ convertDurationToTime(item.duration)| date:'mm:ss' }} minut,
+        cena {{ item.price }} zł
+      </span>
     </div>
-    <app-mail-form></app-mail-form>
   </div>
-  
+  <app-mail-form></app-mail-form>
+</div>
