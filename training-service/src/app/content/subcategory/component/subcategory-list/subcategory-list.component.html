@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
-    <div class="col-4" *ngFor="let item of subcat">
-    <button type="button" class="btn btn-primary mr-2 square" [routerLink]="['/subcategory', item.name]">{{ item.name }}</button>
+    <div class="col" *ngFor="let item of subcat">
+    <a [routerLink]="['/subcategory', item.name]" [routerLinkActive]="['bold']">{{ item.name }}</a>
     </div>
   </div>
   <div class="row">
