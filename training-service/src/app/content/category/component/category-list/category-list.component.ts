@@ -18,7 +18,7 @@ export class CategoryListComponent implements OnInit {
   constructor(private categoryService: CategoryService, private router: Router) {}
 
   ngOnInit(){
-    this.categoryService.getCategoryList().subscribe((data) => this.category = data);
+    this.category = this.categoryService.getCategoryList();
   }
   toggleDescription(show: boolean) {
     this.isShow = show;
