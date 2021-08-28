@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {faThumbsUp,faUser,faEnvelope,faMapMarker} from '@fortawesome/free-solid-svg-icons';
+
 
 
 @Component({
@@ -8,8 +8,6 @@ import {faThumbsUp,faUser,faEnvelope,faMapMarker} from '@fortawesome/free-solid-
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent  {
-  faUser = faUser;
-  faThumbsUp = faThumbsUp;
-  faEnvelope = faEnvelope;
-  faMapMarker = faMapMarker;
+
+
 }
