@@ -1,3 +1,5 @@
+
+
 .text-dark{
   text-decoration: none;
   font-weight:800;
@@ -9,8 +11,10 @@
 .text-center p-3{
   background-color: rgba(5, 5, 5, 0.2);
 }
+
 .icon{
-  font-size: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   margin-left: 1.2rem;
   margin-right: 1.2rem;
 }
