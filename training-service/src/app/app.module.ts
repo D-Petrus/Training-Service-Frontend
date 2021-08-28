@@ -15,13 +15,11 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SubcategoryModule } from './content/subcategory/subcategory.module';
 
-import { CourseListComponent } from './content/course/component/course-list/course-list.component';
-import { CourseModule } from './content/course/course.module';
-
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MailFormComponent } from './pages/mail-form/mail-form.component';
 import { SummaryComponent } from './content/summary/summary.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CourseModule } from './content/course/course.module';
 
 
 @NgModule({
@@ -32,7 +30,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AboutComponent,
     FooterComponent,
     ContactComponent,
-    CourseListComponent,
     MailFormComponent,
     SummaryComponent,
   ],
@@ -44,7 +41,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     ReactiveFormsModule,
     SubcategoryModule,
-
     CourseModule,
     FontAwesomeModule,
     NgbModule

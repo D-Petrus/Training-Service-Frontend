@@ -42,6 +42,6 @@ export class SubcategoryService {
   }
 
   getSubcategoryList(name: string): Observable<DataResponse<Subcategory>> {
-    return of({results: subcategory, count: 4})
+    return of({results: subcategory, count: subcategory.length })
   };
 }

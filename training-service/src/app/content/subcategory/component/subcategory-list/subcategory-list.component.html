@@ -4,7 +4,8 @@
     <a [routerLink]="['/subcategory', item.name]" [routerLinkActive]="['bold']">{{ item.name }}</a>
     </div>
   </div>
+  <app-course-list [name]="(name)"></app-course-list>
   <div class="row">
-    <a routerLink="../categories">Back to categories</a>
+    <a routerLink="/category">Back to categories</a>
   </div>
 </div>
