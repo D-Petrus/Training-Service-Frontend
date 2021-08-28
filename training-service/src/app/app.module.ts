@@ -13,9 +13,7 @@ import { NavbarComponent } from './pages/navbar/navbar.component';
 import { ContentComponent } from './pages/content/content.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { SubcategoryAddComponent } from './content/subcategory/component/subcategory-add/subcategory-add.component';
 import { SubcategoryModule } from './content/subcategory/subcategory.module';
-import { SubcategoryListComponent } from './content/subcategory/component/subcategory-list/subcategory-list.component';
 
 import { CourseListComponent } from './content/course/component/course-list/course-list.component';
 import { CourseModule } from './content/course/course.module';
@@ -34,14 +32,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AboutComponent,
     FooterComponent,
     ContactComponent,
-    SubcategoryAddComponent,
-    SubcategoryListComponent,
-
     CourseListComponent,
-
     MailFormComponent,
     SummaryComponent,
-
   ],
   imports: [
     BrowserModule,

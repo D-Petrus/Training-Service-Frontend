@@ -39,7 +39,6 @@ export class SubcategoryService {
     this.subcatList.push(subcat);
   }
 
-
-  getSubcategoryList = (): Observable<Subcategory[]> =>
-    this.http.get<Subcategory[]>(`${this.apiUrl}/subcategories`);
+  getSubcategoryList = (name: string): Observable<Subcategory[]> =>
+    this.http.get<Subcategory[]>(`${this.apiUrl}/subcategories/${name}`);
 }

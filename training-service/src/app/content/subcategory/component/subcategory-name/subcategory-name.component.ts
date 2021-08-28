@@ -1,25 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { Input } from '@angular/core';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-subcategory-name',
   templateUrl: './subcategory-name.component.html',
   styleUrls: ['./subcategory-name.component.scss']
 })
-export class SubcategoryNameComponent implements OnInit {
+export class SubcategoryNameComponent {
 
-  name: string | undefined;
-  paramSubscription: Subscription | undefined;
-
-  constructor(private route: ActivatedRoute) { }
-
-  ngOnInit() {
-    this.paramSubscription = this.route.params.subscribe(p => this.name = p['name'])
-  }
-
-  ngOnDestroy() {
-    this.paramSubscription?.unsubscribe();
-  }
-
+  @Input() name: string = '';
 }
