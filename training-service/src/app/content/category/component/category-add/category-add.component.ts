@@ -29,7 +29,7 @@ export class CategoryAddComponent implements OnInit {
 
   saveCategory() {
     const cat: Category = this.categoryAddForm.value;
-    this.categoryService.addCategory(cat);
+    // this.categoryService.addCategory(cat);
     this.categoryAddForm.reset();
     this.submitted = true;
   }

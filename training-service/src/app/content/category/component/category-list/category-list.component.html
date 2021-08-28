@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
 
-    <div class="-4" *ngFor="let item of category">
+    <div class="-4" *ngFor="let item of categories">
     <div class="categoryTile" [routerLink]="['/category', item.name]">{{ item.name }}
       <div class="btn btn-secondary" (mouseenter)="toggleDescription(true)" (mouseleave)="toggleDescription(false)">
         info
