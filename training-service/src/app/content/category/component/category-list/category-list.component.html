@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-sm">
   <div class="row">
 
     <div class="-4" *ngFor="let item of categories">
@@ -12,7 +12,10 @@
       </div>
     </div>
     </div>
+    <div class="col-sm4" *ngFor="let item of category">
 
+      <button type="button" class="btn btn-primary mr-2 square" [routerLink]="['/category', item.name]">{{ item.name }}
+      </button>
 
     </div>
     </div>
