@@ -13,12 +13,14 @@ import { CategoryService } from '../../service/category.service';
 export class CategoryListComponent implements OnInit {
   isShow = false;
 
-  category: Category[] = [];
+  categories: Category[] = [];
 
   constructor(private categoryService: CategoryService, private router: Router) {}
 
   ngOnInit(){
-    this.categoryService.getCategoryList().subscribe((data) => this.category = data);
+    this.categoryService.getCategoryList().subscribe(data => {
+      this.categories = data.results;
+    })
   }
   toggleDescription(show: boolean) {
     this.isShow = show;
