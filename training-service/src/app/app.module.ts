@@ -23,6 +23,7 @@ import { CourseModule } from './content/course/course.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MailFormComponent } from './pages/mail-form/mail-form.component';
 import { SummaryComponent } from './content/summary/summary.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { SummaryComponent } from './content/summary/summary.component';
     SubcategoryModule,
 
     CourseModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    AngularFontAwesomeModule
   ],
   providers: [CategoryService],
   bootstrap: [AppComponent]
