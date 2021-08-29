@@ -1,6 +1,7 @@
-import { Input } from '@angular/core';
+import { Input, Output } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Course } from '../../model/course';
 import { CourseService } from '../../service/course.service';
 
@@ -12,8 +13,11 @@ import { CourseService } from '../../service/course.service';
 })
 export class CourseListComponent implements OnInit {
 
-  course: Course[] = [];
   @Input() name: string = '';
+
+  summaryUrl: string = '/summary';
+  selectedCourses: string[] = [];
+  course: Course[] = [];
 
   private patternEmail: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
 
@@ -24,7 +28,7 @@ export class CourseListComponent implements OnInit {
     ])
   });
 
-  constructor(private courseService: CourseService) { }
+  constructor(private courseService: CourseService, private route: Router) { }
 
   ngOnInit() {
     this.courseService.getCourseList(this.name).subscribe(data => {
@@ -33,5 +37,20 @@ export class CourseListComponent implements OnInit {
   }
 
   convertDurationToTime = (item: number) => item * 1000;
+
+
+  courseClick = (event: any, name: string) => {
+    if (event.target.checked) {
+      this.selectedCourses.push(name);
+    } else {
+      this.selectedCourses = this.selectedCourses.filter(a => a!== name);
+    }
+  }
+
+  onEmailSubmit = (event: any) => {
+    this.courseService.courses = this.selectedCourses;
+    this.courseService.email = event['email'];
+    this.route.navigate([this.summaryUrl]);
+  }
 
 }

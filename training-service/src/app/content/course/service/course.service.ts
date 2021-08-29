@@ -8,6 +8,25 @@ import { Course } from '../model/course';
 export class CourseService {
 
   private courseList: Course[] = course;
+  private _email: string = '';
+  private _courses: string[] = [];
+
+  get email(): string {
+    return this._email;
+  }
+
+  set email(value: string) {
+    this._email = value;
+  }
+
+  get courses(): string[] {
+    return this._courses;
+  }
+
+  set courses(value: string[]) {
+    this._courses = value;
+  }
+
 
   addNewCourse(course:Course): void {
     this.courseList.push(course);
