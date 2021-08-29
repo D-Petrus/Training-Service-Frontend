@@ -6,11 +6,12 @@ $green-alert: green;
   justify-content: flex-end;
   position: relative;
   margin-right: 1rem;
-  margin-top: 10rem;
+  margin-top: 16rem;
 }
 
 .form-group{
   width: 15rem;
+  height: 2.5rem;
 }
 .not-valid-input {
   border-color: $red-alert;
@@ -27,5 +28,10 @@ $green-alert: green;
   font-weight: 500;
   padding: 0.5rem;
 }
-
+.square {
+  width: 5rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  margin-left: 0.2rem;
+}
   
