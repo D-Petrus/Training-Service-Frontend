@@ -5,7 +5,7 @@ import {faThumbsUp,faUser,faEnvelope,faMapMarker} from '@fortawesome/free-solid-
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent  {
   faUser = faUser;
