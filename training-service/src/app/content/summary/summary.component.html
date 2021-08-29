@@ -1,6 +1,7 @@
 <div class="container">
-  <h2>Dziękujemy za skorzystanie z oferty INQOO!</h2>
-  <p>Kursy jakie zostały wybrane:</p>
-  <h3 *ngFor="let c of coursesSelected">{{ c }}</h3>
-  <p>Oferta została wysłana na adres: <b>{{ email }}</b></p>
+  <h3>Podsumowanie</h3>
+  <p>Dziękujemy za skorzystanie z oferty INQOO!</p>
+  <p>Wybrane kursy:</p>
+  <div class="row" *ngFor="let c of coursesSelected"> <fa-icon [icon]="faCheck" class="icon fa-2x"></fa-icon><span class="course">{{c}}</span></div>
+  <div class="send">Oferta została wysłana na adres: <b>{{ email }}</b></div>
 </div>
