@@ -1,25 +1,10 @@
-<div class="submitForm">
-  <form [formGroup]="mailForm">
-    <div class="form-group">
-      <input
-        type="email"
-        class="form-control"
-        placeholder="Enter e-mail"
-        formControlName="emailAddress"
-        [ngClass]="
-          !mailForm.valid && mailForm.touched ? 'not-valid-input' : 'valid-input'
-        "
-      />
-      <p
-        *ngIf="
-          !mailForm.controls['emailAddress'].valid &&
-          mailForm.controls['emailAddress'].touched
-        "
-        class="not-valid-text"
-      >
-        E-mail is not valid
-      </p>
-    </div>
-  </form>
-  <button class="btn btn-primary mr-2 square" (click)="submit()">Submit</button>
+<form [formGroup]="mailForm">
+<div class="input-group mb-3" *ngIf="showAdnotation" class="showEmailInput">
+  <h3>Wyślij ofertę na mail!</h3>
+  <input type="email" class="form-control" placeholder="Podaj swój e-mail" formControlName="emailAddress" [ngClass]="!mailForm.valid && mailForm.touched ? 'not-valid-input' : 'valid-input'">
+  <div class="input-group-append">
+    <button class="btn btn-outline-primary" type="button" (click)="submit()">Wyślij</button>
   </div>
+  <p *ngIf="!mailForm.controls['emailAddress'].valid && mailForm.controls['emailAddress'].touched" class="not-valid-text">E-mail nie poprawny!</p>
+</div>
+</form>

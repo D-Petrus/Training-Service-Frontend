@@ -51,8 +51,10 @@ export class CourseListComponent implements OnInit {
     this.courseService.courses = this.selectedCourses;
     this.courseService.email = event['email'];
     this.route.navigate([this.summaryUrl]);
-    console.log(event);
-
   }
+
+  show = (): boolean => this.selectedCourses.length > 0;
+
+  categoryUrl = () => this.route.navigate(['/category']);
 
 }
