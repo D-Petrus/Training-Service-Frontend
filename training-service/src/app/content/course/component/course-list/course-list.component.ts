@@ -15,7 +15,7 @@ export class CourseListComponent implements OnInit {
 
   @Input() name: string = '';
 
-  goToSummary: string = '/summary';
+  summaryUrl: string = '/summary';
   selectedCourses: string[] = [];
   course: Course[] = [];
 
@@ -42,17 +42,15 @@ export class CourseListComponent implements OnInit {
   courseClick = (event: any, name: string) => {
     if (event.target.checked) {
       this.selectedCourses.push(name);
-      console.log(name);
     } else {
       this.selectedCourses = this.selectedCourses.filter(a => a!== name);
     }
-    console.log(this.selectedCourses);
   }
 
   onEmailSubmit = (event: any) => {
     this.courseService.courses = this.selectedCourses;
     this.courseService.email = event['email'];
-    this.route.navigate([this.goToSummary]);
+    this.route.navigate([this.summaryUrl]);
   }
 
 }
