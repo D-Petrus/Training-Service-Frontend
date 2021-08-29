@@ -29,20 +29,20 @@
   user-select: none;
 }
 
-.list-group input[type="checkbox"] {
+.checkbox {
   display: none;
 }
 
-.list-group input[type="checkbox"] + .list-group-item {
+.checkbox + .list-group-item {
   cursor: pointer;
 }
 
-.list-group input[type="checkbox"]:checked + .list-group-item {
+.checkbox:checked + .list-group-item {
   background-color: $blue-input;
   color: $white-color;
 }
 
-.list-group input[type="checkbox"]:checked + .list-group-item:before {
+.checkbox:checked + .list-group-item:before {
   color: inherit;
 }
 
