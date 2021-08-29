@@ -2,6 +2,8 @@
 
 .container {
   margin-top: 1rem;
+  display: flex;
+  align-content: center;
 }
 .check {
   cursor: pointer
@@ -17,15 +19,33 @@
 
 .check span {
   padding: 0.438rem 0.875rem;
-  border: 2px solid $main-color;
   display: inline-block;
-  color: $main-color;
-  border-radius: 3px;
-  text-transform: uppercase;  
+  text-transform: uppercase; 
+  width: 15rem; 
+  background-color: $button;
+  color: $white-color;
+  text-align: center;
+  font-weight: 450;
+  border-radius: 0.3rem;
+  
 }
 
 .check input:checked+span {
-  border-color: $main-color;
-  background-color: $main-color;
-  color: $white-color;
+ 
+  font-weight: 800 ;
+  text-decoration: underline;
+  background-color: $button;
 }
+.description{
+  font-weight: 400;
+  margin-top: 1rem;
+  color: $description;
+
+}
+.bold{
+  font-weight: 650;
+}
+
+    
+  
+

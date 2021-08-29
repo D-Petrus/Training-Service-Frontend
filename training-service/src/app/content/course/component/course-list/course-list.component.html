@@ -4,10 +4,9 @@
       <label class="check">
         <input type="checkbox" (click)="courseClick($event, item.name)">
           <span>{{ item.name }}</span>
-      </label>
-      <span>
-        opis: {{ item.description }}, czas trwania: {{ convertDurationToTime(item.duration)| date:'mm:ss' }} minut,
-        cena {{ item.price }} zł
+      <span class="description">
+        opis: <span class="bold">{{ item.description}}</span>,czas trwania: <span class="bold">{{ convertDurationToTime(item.duration)| date:'mm:ss' }} minut</span>,
+        cena <span class="bold">{{ item.price }} zł</span>
       </span>
     </div>
   </div>
