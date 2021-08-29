@@ -1,5 +1,5 @@
-$red-alert: #f00;
-$green-alert: green;
+@import "../../colorPalette.scss";
+
 .submitForm{
   display: flex;
   flex-direction: row;
@@ -34,4 +34,3 @@ $green-alert: green;
   font-size: 1rem;
   margin-left: 0.2rem;
 }
-  
