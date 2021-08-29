@@ -16,7 +16,6 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { SubcategoryModule } from './content/subcategory/subcategory.module';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { MailFormComponent } from './pages/mail-form/mail-form.component';
 import { SummaryComponent } from './content/summary/summary.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CourseModule } from './content/course/course.module';
@@ -30,7 +29,6 @@ import { CourseModule } from './content/course/course.module';
     AboutComponent,
     FooterComponent,
     ContactComponent,
-    MailFormComponent,
     SummaryComponent,
   ],
   imports: [
