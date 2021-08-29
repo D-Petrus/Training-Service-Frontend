@@ -3,12 +3,15 @@
     <div class="form-check" *ngFor="let item of course">
       <label class="check">
         <input type="checkbox" (click)="courseClick($event, item.name)">
-          <span>{{ item.name }}</span>
+          <span class="box">{{ item.name }}</span>
+      </label>
       <span class="description">
         opis: <span class="bold">{{ item.description}}</span>,czas trwania: <span class="bold">{{ convertDurationToTime(item.duration)| date:'mm:ss' }} minut</span>,
         cena <span class="bold">{{ item.price }} zł</span>
       </span>
     </div>
   </div>
+
   <app-mail-form (mailSubmit)="onEmailSubmit($event)"></app-mail-form>
+
 </div>
