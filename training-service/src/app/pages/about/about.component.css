@@ -1,4 +1,19 @@
-.col-sm{
-    display: table;
-    margin:auto;
-}
+.image-padding {
+    width: 100%;
+    padding-top: 1rem;
+  }
+  
+  .content-padding {
+    padding: 1.5rem 0rem 2.5rem 0rem;
+  }
+  
+  .title-padding {
+    padding-top: 3rem;
+  }
+  
+  .bigger{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    padding: 15px 20px 15px 20px;
+  }
+  
