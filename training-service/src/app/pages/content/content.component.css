@@ -1,18 +1,25 @@
+.container{
+  display: flex;
+  justify-content: center;
+
+}
 .image-padding {
   width: 80%;
   padding-top: 2rem;
 }
 
 .content-padding {
-  padding: 1.5rem 0rem 2.5rem 0rem;
+  padding:  2.5rem ;
+  margin-left: 0.2rem;
 }
 
 .title-padding {
   padding-top: 3rem;
+  padding-left: 3rem;
 }
 
 .bigger{
-  margin-top: 1rem;
   font-size: 1.3rem;
   padding: 15px 20px 15px 20px;
+  margin-left: 2.4rem;
 }
