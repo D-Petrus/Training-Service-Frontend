@@ -3,7 +3,7 @@
   <h3>Wyślij ofertę na mail!</h3>
   <input type="email" class="form-control" placeholder="Podaj swój e-mail" formControlName="emailAddress" [ngClass]="!mailForm.valid && mailForm.touched ? 'not-valid-input' : 'valid-input'">
   <div class="input-group-append">
-    <button class="btn btn-outline-primary" type="button" (click)="submit()">Wyślij</button>
+    <button class="btn btn-outline-primary" type="button" (click)="submit()" [disabled]="submitDisabledWhenErrors()">Wyślij</button>
   </div>
   <p *ngIf="!mailForm.controls['emailAddress'].valid && mailForm.controls['emailAddress'].touched" class="not-valid-text">E-mail nie poprawny!</p>
 </div>
