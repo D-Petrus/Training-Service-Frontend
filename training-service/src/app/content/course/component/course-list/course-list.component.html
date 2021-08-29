@@ -8,7 +8,7 @@
       <span class="info">(czas trwania: {{ convertDurationToTime(item.duration) | date:'mm:ss'}} minut, koszt: {{ item.price }} zł)</span>
     </label>
     </span>
-    <a class="backSite" (click)="categoryUrl">&laquo; Powrót do kategorii</a>
+    <a class="backSite" (click)="categoryUrl()">&laquo; Powrót do kategorii</a>
   </div>
   <app-mail-form [showAdnotation]="show()" (mailSubmit)="onEmailSubmit($event)"></app-mail-form>
 </div>
