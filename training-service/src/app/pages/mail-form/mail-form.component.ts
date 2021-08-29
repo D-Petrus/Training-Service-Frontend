@@ -21,4 +21,8 @@ export class MailFormComponent {
   });
 
   submit = () => this.mailSubmit.emit({email: this.mailForm.controls['emailAddress'].value});
+
+  submitDisabledWhenErrors = ():boolean => {
+    return !(this.mailForm.valid || this.mailForm.value==null);
+  }
 }
