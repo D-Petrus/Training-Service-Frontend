@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./mail-form.component.scss']
 })
 export class MailFormComponent {
+
+  @Output() mailSubmit: EventEmitter<{email: string}> = new EventEmitter();
 
   private patternEmail: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
 
@@ -17,4 +19,5 @@ export class MailFormComponent {
     ])
   });
 
+  submit = () => this.mailSubmit.emit({email: this.mailForm.controls['emailAddress'].value});
 }
