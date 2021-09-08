@@ -17,12 +17,12 @@ export class CategoryListComponent implements OnInit {
 
   constructor(private categoryService: CategoryService, private router: Router) {}
 
-  ngOnInit(){
-    this.categoryService.getCategoryList().subscribe(data => {
-      this.categories = data.results;
-    })
+  ngOnInit(): void{
+    this.categoryService.getCategoryList().subscribe(categories => {
+      this.categories = categories;
+    });
   }
-  toggleDescription(show: boolean) {
+  toggleDescription(show: boolean): void {
     this.isShow = show;
   }
 }
