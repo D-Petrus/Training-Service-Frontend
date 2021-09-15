@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Subcategory } from '../../model/subcategory';
-import { SubcategoryService } from '../../service/subcategory.service';
 
 @Component({
   selector: 'app-subcategory-add',
@@ -13,21 +11,21 @@ export class SubcategoryAddComponent {
   submitted = false;
 
   subcatAddForm = new FormGroup({
-    id: new FormControl(""),
-    name: new FormControl("", Validators.required),
-    description: new FormControl("", [
+    id: new FormControl(''),
+    name: new FormControl('', Validators.required),
+    description: new FormControl('', [
       Validators.required,
       Validators.maxLength(300)
     ])
   });
 
-  constructor(private subcategoryService: SubcategoryService) { }
+  constructor() { }
 
-  saveSubcat() {
-    const subcat:Subcategory = this.subcatAddForm.value;
-      this.subcategoryService.addNewSubCat(subcat);
-      this.submitted = true;
-      this.subcatAddForm.reset();
-  }
+  // saveSubcat() {
+  //   const subcat:Subcategory = this.subcatAddForm.value;
+  //     this.subcategoryService.addNewSubCat(subcat);
+  //     this.submitted = true;
+  //     this.subcatAddForm.reset();
+  // }
 
 }

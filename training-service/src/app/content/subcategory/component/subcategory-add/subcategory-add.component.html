@@ -16,7 +16,7 @@
             Description is not valid</p>
         </div>
         <div class="form-group">
-          <input type="button" value="Save subcategory" class="btn btn-primary" [disabled]="!subcatAddForm.valid" (click)="saveSubcat()">
+          <input type="button" value="Save subcategory" class="btn btn-primary" [disabled]="!subcatAddForm.valid">
         </div>
         <div *ngIf="submitted" class="alert alert-success mt-10">
           Subcategory saved!

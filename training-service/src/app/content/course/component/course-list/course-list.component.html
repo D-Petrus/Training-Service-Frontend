@@ -1,6 +1,6 @@
 <div class="container">
   <div class="list-group">
-    <span *ngFor="let item of course, let i = index">
+    <span *ngFor="let item of courses, let i = index">
     <input class="checkbox" type="checkbox" value="{ item.name }" id="checkbox_{{i}}" (click)="courseClick($event, item.name)">
     <label for="checkbox_{{i}}" class="list-group-item">
       <span class="title">{{ item.name }}</span>
