@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { Course } from '../../model/course';
 import { CourseService } from '../../service/course.service';
 import {Subscription} from 'rxjs';
+import {OfferSendService} from '../../../offer/service/offer-send.service';
 
 
 @Component({
@@ -31,12 +32,23 @@ export class CourseListComponent implements OnInit {
     ])
   });
 
-  constructor(private route: Router, private courseService: CourseService) { }
+  constructor(private route: Router,
+              private courseService: CourseService,
+              private offerService: OfferSendService) { }
 
   ngOnInit(): void {
     this.courseService.getCourseList(this.name).subscribe(courseNames => {
       console.log(courseNames);
       this.courses = courseNames;
+    });
+  }
+
+  private createOffer(courses: Array<string>, email: string) {
+    this.offerService.createOffer({
+      mail: email,
+      subcategoryName: this.offerService._subcategoryName,
+      categoryName: this.offerService._categoryName,
+      courses
     });
   }
 

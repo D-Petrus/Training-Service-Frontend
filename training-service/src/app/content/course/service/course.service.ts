@@ -45,5 +45,5 @@ export class CourseService {
   // }
 
   getCourseList = (subcategoryName: string): Observable<Course[]> =>
-    this.http.get<Course[]>(`${this.apiUrl}/subcategories/${subcategoryName}`)
+    this.http.get<Course[]>(`${this.apiUrl}/courses/${subcategoryName}`)
 }

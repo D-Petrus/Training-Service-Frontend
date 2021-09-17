@@ -19,6 +19,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SummaryComponent } from './content/summary/summary.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CourseModule } from './content/course/course.module';
+import {OfferSendComponent} from './content/offer/component/offer-send/offer-send.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { CourseModule } from './content/course/course.module';
     FooterComponent,
     ContactComponent,
     SummaryComponent,
+    OfferSendComponent,
   ],
   imports: [
     BrowserModule,
