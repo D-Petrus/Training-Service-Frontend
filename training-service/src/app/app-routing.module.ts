@@ -20,7 +20,7 @@ import { SubcategoryComponent } from './content/subcategory/component/subcategor
 const routes: Routes = [
   { path: 'category', component: CategoryListComponent },
   { path: 'category/add', component: CategoryAddComponent },
-  { path: 'category/:name', component: CategoryNameComponent },
+  { path: 'category/:name', component: SubcategoryComponent },
   { path: 'subcategory', component: SubcategoryComponent },
   { path: 'subcategory/add', component: SubcategoryAddComponent },
   { path: 'subcategory/:name', component: SubcategoryComponent },
