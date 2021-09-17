@@ -10,13 +10,13 @@ import { Subscription } from 'rxjs';
 export class SubcategoryComponent implements OnInit, OnDestroy {
 
   paramSubscription: Subscription | undefined;
-  name: string = '';
+  name = '';
 
   constructor(private route: ActivatedRoute) { }
 
 
   ngOnInit(): void {
-    this.paramSubscription = this.route.params.subscribe(p => this.name = p['name']);
+    this.paramSubscription = this.route.params.subscribe(p => this.name = p.name);
   }
 
   ngOnDestroy(): void {

@@ -24,6 +24,7 @@ const routes: Routes = [
   { path: 'subcategory', component: SubcategoryComponent },
   { path: 'subcategory/add', component: SubcategoryAddComponent },
   { path: 'subcategory/:name', component: SubcategoryComponent },
+  { path: 'courses/:name', component: CourseListComponent},
   { path: 'about', component: AboutComponent},
   { path: 'contact', component: ContactComponent },
   { path: 'course' , component: CourseListComponent},

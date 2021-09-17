@@ -4,6 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Course } from '../../model/course';
 import { CourseService } from '../../service/course.service';
+import {Subscription} from 'rxjs';
 
 
 @Component({
@@ -15,6 +16,7 @@ export class CourseListComponent implements OnInit {
 
   @Input() name = '';
   @Input() courses: Course[] = [];
+  private sub: Subscription | undefined;
 
   summaryUrl = '/summary';
   selectedCourses: string[] = [];
@@ -32,7 +34,10 @@ export class CourseListComponent implements OnInit {
   constructor(private route: Router, private courseService: CourseService) { }
 
   ngOnInit(): void {
-
+    this.courseService.getCourseList(this.name).subscribe(courseNames => {
+      console.log(courseNames);
+      this.courses = courseNames;
+    });
   }
 
   convertDurationToTime = (item: number) => item * 1000;
