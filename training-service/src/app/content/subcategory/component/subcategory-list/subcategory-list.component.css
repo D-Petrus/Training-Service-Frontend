@@ -1,8 +1,11 @@
+.container-sm{
+  display: flex;
+}
 .square {
-  width: 15rem;
-  height: 15rem;
+  width: 14rem;
+  height: 14rem;
   margin: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .bold {
@@ -13,5 +16,4 @@
   margin-top: 1rem;
   font-weight: 800;
   font-size: 1rem;
-  
 }

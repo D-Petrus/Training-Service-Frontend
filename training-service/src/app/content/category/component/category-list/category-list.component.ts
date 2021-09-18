@@ -1,9 +1,7 @@
-import { isNgTemplate } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import {Component, Input, OnInit} from '@angular/core';
 import { Category } from '../../model/category';
 import { CategoryService } from '../../service/category.service';
+import {OfferSendService} from '../../../offer/service/offer-send.service';
 
 @Component({
   selector: 'app-category-list',
@@ -11,18 +9,17 @@ import { CategoryService } from '../../service/category.service';
   styleUrls: ['./category-list.component.scss']
 })
 export class CategoryListComponent implements OnInit {
-  isShow = false;
+  @Input() name = '';
 
   categories: Category[] = [];
 
-  constructor(private categoryService: CategoryService, private router: Router) {}
+  constructor(private categoryService: CategoryService,
+              private offerService: OfferSendService) {}
 
   ngOnInit(): void{
     this.categoryService.getCategoryList().subscribe(categories => {
       this.categories = categories;
     });
   }
-  toggleDescription(show: boolean): void {
-    this.isShow = show;
-  }
+  selectCategory = (categoryName: string) => this.offerService._categoryName = categoryName;
 }

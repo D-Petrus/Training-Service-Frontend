@@ -1,9 +1,11 @@
-import { Input, Output } from '@angular/core';
+import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Course } from '../../model/course';
 import { CourseService } from '../../service/course.service';
+import {Subscription} from 'rxjs';
+import {OfferSendService} from '../../../offer/service/offer-send.service';
 
 
 @Component({
@@ -13,27 +15,43 @@ import { CourseService } from '../../service/course.service';
 })
 export class CourseListComponent implements OnInit {
 
-  @Input() name: string = '';
+  @Input() name = '';
+  @Input() courses: Course[] = [];
+  private sub: Subscription | undefined;
 
-  summaryUrl: string = '/summary';
+  summaryUrl = '/summary';
   selectedCourses: string[] = [];
-  course: Course[] = [];
 
-  private patternEmail: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
+
+  private patternEmail = '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$';
 
   mailForm = new FormGroup({
-    emailAddress: new FormControl("", [
+    emailAddress: new FormControl('', [
       Validators.required,
       Validators.pattern(this.patternEmail)
     ])
   });
 
-  constructor(private courseService: CourseService, private route: Router) { }
+  constructor(private route: Router,
+              private courseService: CourseService,
+              private offerService: OfferSendService) { }
 
-  ngOnInit() {
-    this.courseService.getCourseList(this.name).subscribe(data => {
-      this.course = data.results;
+  ngOnInit(): void {
+    this.courseService.getCourseList(this.name).subscribe(courseNames => {
+      console.log(courseNames);
+      this.courses = courseNames;
     });
+  }
+
+  private createOffer(courses: Array<string>, email: string): void {
+    this.offerService.createOffer({
+      mail: email,
+      subcategoryName: this.offerService._subcategoryName,
+      categoryName: this.offerService._categoryName,
+      courses,
+      sumPrice: this.courses.map(c => c.price).reduce((prev, current) => prev + current),
+      sumDuration:  this.courses.map(c => c.duration).reduce((prev, current) => prev + current)
+    }).subscribe();
   }
 
   convertDurationToTime = (item: number) => item * 1000;
@@ -43,13 +61,14 @@ export class CourseListComponent implements OnInit {
     if (event.target.checked) {
       this.selectedCourses.push(name);
     } else {
-      this.selectedCourses = this.selectedCourses.filter(a => a!== name);
+      this.selectedCourses = this.selectedCourses.filter(a => a !== name);
     }
   }
 
   onEmailSubmit = (event: any) => {
     this.courseService.courses = this.selectedCourses;
-    this.courseService.email = event['email'];
+    this.courseService.email = event.email;
+    this.createOffer(this.selectedCourses, event.email);
     this.route.navigate([this.summaryUrl]);
   }
 
