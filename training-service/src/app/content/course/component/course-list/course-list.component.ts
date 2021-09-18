@@ -43,13 +43,15 @@ export class CourseListComponent implements OnInit {
     });
   }
 
-  private createOffer(courses: Array<string>, email: string) {
+  private createOffer(courses: Array<string>, email: string): void {
     this.offerService.createOffer({
       mail: email,
       subcategoryName: this.offerService._subcategoryName,
       categoryName: this.offerService._categoryName,
-      courses
-    });
+      courses,
+      sumPrice: this.courses.map(c => c.price).reduce((prev, current) => prev + current),
+      sumDuration:  this.courses.map(c => c.duration).reduce((prev, current) => prev + current)
+    }).subscribe();
   }
 
   convertDurationToTime = (item: number) => item * 1000;
@@ -66,6 +68,7 @@ export class CourseListComponent implements OnInit {
   onEmailSubmit = (event: any) => {
     this.courseService.courses = this.selectedCourses;
     this.courseService.email = event.email;
+    this.createOffer(this.selectedCourses, event.email);
     this.route.navigate([this.summaryUrl]);
   }
 

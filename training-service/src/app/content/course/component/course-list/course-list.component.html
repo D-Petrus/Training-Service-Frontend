@@ -5,7 +5,7 @@
     <label for="checkbox_{{i}}" class="list-group-item">
       <span class="title">{{ item.name }}</span>
       <span class="desc">{{ item.description }}</span>
-      <span class="info">(czas trwania: {{ convertDurationToTime(item.duration) | date:'mm:ss'}} minut, koszt: {{ item.price }} zł)</span>
+      <span class="info">(czas trwania: {{ item.duration}} godzin, koszt: {{ item.price }} zł)</span>
     </label>
     </span>
     <a class="backSite" (click)="categoryUrl()">&laquo; Powrót do kategorii</a>

@@ -19,7 +19,7 @@ export class SubcategoryService {
   getSubcategoryList = (categoryName: string): Observable<Subcategory[]> =>
     this.http.get<Category[]>(`${this.apiUrl}/categories/${categoryName}`).pipe(
       map(categories => categories[0]),
-      map((category: Category) => category.subcategoryList),
+      map((category: Category) => category?.subcategoryList),
     )
 
 }

@@ -3,4 +3,6 @@ export interface OfferSend {
   subcategoryName: string;
   categoryName: string;
   courses: string[];
+  sumPrice: number;
+  sumDuration: number;
 }

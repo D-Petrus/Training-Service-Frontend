@@ -1,8 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col" *ngFor="let item of subcat">
-<!--    <a [routerLink]="['/subcategory', item.name]" [routerLinkActive]="['bold']" (click)="subcategorySelect(item.name)">{{ item.name }}</a>-->
-      <button type="button" class="btn btn-primary" [routerLink]="['/subcategory', item.name]" (click)="subcategorySelect(item.name)">{{ item.name }}
+      <button type="button" class="btn btn-primary square" [routerLink]="['/subcategory', item.name]" (click)="subcategorySelect(item.name)">{{ item.name }}
       </button>
     </div>
   </div>

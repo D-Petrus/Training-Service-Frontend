@@ -3,6 +3,7 @@ import { Subcategory } from '../../model/subcategory';
 import { SubcategoryService } from '../../service/subcategory.service';
 import {Course} from '../../../course/model/course';
 import {CourseService} from '../../../course/service/course.service';
+import {OfferSendService} from '../../../offer/service/offer-send.service';
 
 @Component({
   selector: 'app-subcategory-list',
@@ -15,18 +16,19 @@ export class SubcategoryListComponent implements OnInit {
   subcat: Subcategory[] = [];
   courses: Course[] = [];
 
-  constructor(private subcategoryService: SubcategoryService, private courseService: CourseService) { }
+  constructor(private subcategoryService: SubcategoryService,
+              private courseService: CourseService,
+              private offerService: OfferSendService) { }
 
   ngOnInit(): void {
     this.subcategoryService.getSubcategoryList(this.name).subscribe(subcategories => {
-      console.log(subcategories);
       this.subcat = subcategories;
     });
+    this.offerService._subcategoryName = this.name;
   }
 
   subcategorySelect = (subcategoryName: string) => {
     this.courseService.getCourseList(subcategoryName).subscribe(data => {
-      console.log(data);
       this.courses = data;
     });
   }
